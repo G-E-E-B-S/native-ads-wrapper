@@ -1,0 +1,550 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DFA97FA0E4892FE153CEE99 /* Pods_native_ads.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A40E0F8F6E83A77181DFB66 /* Pods_native_ads.framework */; };
+		D40FCF5829599A4B009345BD /* native_ads.h in Headers */ = {isa = PBXBuildFile; fileRef = D40FCF5729599A4B009345BD /* native_ads.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D40FCFE229599A5C009345BD /* interstitial_ad_listener.h in Headers */ = {isa = PBXBuildFile; fileRef = D40FCF6329599A5C009345BD /* interstitial_ad_listener.h */; };
+		D40FCFE329599A5C009345BD /* rewarded_ad_listener.h in Headers */ = {isa = PBXBuildFile; fileRef = D40FCF6429599A5C009345BD /* rewarded_ad_listener.h */; };
+		D40FCFE429599A5C009345BD /* rewarded_ad.mm in Sources */ = {isa = PBXBuildFile; fileRef = D40FCF6529599A5C009345BD /* rewarded_ad.mm */; };
+		D40FCFE529599A5C009345BD /* banner_ad_listener.mm in Sources */ = {isa = PBXBuildFile; fileRef = D40FCF6629599A5C009345BD /* banner_ad_listener.mm */; };
+		D40FCFE629599A5C009345BD /* banner_ad.mm in Sources */ = {isa = PBXBuildFile; fileRef = D40FCF6729599A5C009345BD /* banner_ad.mm */; };
+		D40FCFE729599A5C009345BD /* interstitial_ad_listener.mm in Sources */ = {isa = PBXBuildFile; fileRef = D40FCF6829599A5C009345BD /* interstitial_ad_listener.mm */; };
+		D40FCFE829599A5C009345BD /* rewarded_ad_listener.mm in Sources */ = {isa = PBXBuildFile; fileRef = D40FCF6929599A5C009345BD /* rewarded_ad_listener.mm */; };
+		D40FCFE929599A5C009345BD /* interstitial_ad.mm in Sources */ = {isa = PBXBuildFile; fileRef = D40FCF6A29599A5C009345BD /* interstitial_ad.mm */; };
+		D40FCFEA29599A5C009345BD /* ad_status.h in Headers */ = {isa = PBXBuildFile; fileRef = D40FCF6B29599A5C009345BD /* ad_status.h */; };
+		D40FCFEB29599A5C009345BD /* banner_ad_listener.h in Headers */ = {isa = PBXBuildFile; fileRef = D40FCF6C29599A5C009345BD /* banner_ad_listener.h */; };
+		D44BD04629658FD40048F387 /* rewarded_interstial_ad_listener.h in Headers */ = {isa = PBXBuildFile; fileRef = D44BD04429658FD40048F387 /* rewarded_interstial_ad_listener.h */; };
+		D44BD04729658FD40048F387 /* rewarded_interstial_ad_listener.mm in Sources */ = {isa = PBXBuildFile; fileRef = D44BD04529658FD40048F387 /* rewarded_interstial_ad_listener.mm */; };
+		D44BD04F2965A7080048F387 /* rewarded_interstitial_ad.mm in Sources */ = {isa = PBXBuildFile; fileRef = D44BD04E2965A7080048F387 /* rewarded_interstitial_ad.mm */; };
+		D4973ED2295AF8980057B552 /* interstitial_handler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4973EC3295AF8980057B552 /* interstitial_handler.cpp */; };
+		D4973ED3295AF8980057B552 /* interstitial_handler.h in Headers */ = {isa = PBXBuildFile; fileRef = D4973EC4295AF8980057B552 /* interstitial_handler.h */; };
+		D4973ED4295AF8980057B552 /* interstitial_implementation.h in Headers */ = {isa = PBXBuildFile; fileRef = D4973EC5295AF8980057B552 /* interstitial_implementation.h */; };
+		D4973ED5295AF8980057B552 /* banner_ad_handler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4973EC7295AF8980057B552 /* banner_ad_handler.cpp */; };
+		D4973ED6295AF8980057B552 /* banner_ad_handler.h in Headers */ = {isa = PBXBuildFile; fileRef = D4973EC8295AF8980057B552 /* banner_ad_handler.h */; };
+		D4973ED7295AF8980057B552 /* banner_implementation.h in Headers */ = {isa = PBXBuildFile; fileRef = D4973EC9295AF8980057B552 /* banner_implementation.h */; };
+		D4973ED8295AF8980057B552 /* rewarded_video_handler.h in Headers */ = {isa = PBXBuildFile; fileRef = D4973ECB295AF8980057B552 /* rewarded_video_handler.h */; };
+		D4973ED9295AF8980057B552 /* rewarded_video_handler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4973ECC295AF8980057B552 /* rewarded_video_handler.cpp */; };
+		D4973EDA295AF8980057B552 /* rewarded_video_implementation.h in Headers */ = {isa = PBXBuildFile; fileRef = D4973ECD295AF8980057B552 /* rewarded_video_implementation.h */; };
+		D4973EDB295AF8980057B552 /* rewarded_interstitial_video_implementation.h in Headers */ = {isa = PBXBuildFile; fileRef = D4973ECF295AF8980057B552 /* rewarded_interstitial_video_implementation.h */; };
+		D4973EDC295AF8980057B552 /* rewarded_interstitial_video_handler.h in Headers */ = {isa = PBXBuildFile; fileRef = D4973ED0295AF8980057B552 /* rewarded_interstitial_video_handler.h */; };
+		D4973EDD295AF8980057B552 /* rewarded_interstitial_video_handler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4973ED1295AF8980057B552 /* rewarded_interstitial_video_handler.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7A40E0F8F6E83A77181DFB66 /* Pods_native_ads.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_native_ads.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D40FCF5429599A4B009345BD /* native_ads.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = native_ads.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D40FCF5729599A4B009345BD /* native_ads.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = native_ads.h; sourceTree = "<group>"; };
+		D40FCF6329599A5C009345BD /* interstitial_ad_listener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interstitial_ad_listener.h; sourceTree = "<group>"; };
+		D40FCF6429599A5C009345BD /* rewarded_ad_listener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rewarded_ad_listener.h; sourceTree = "<group>"; };
+		D40FCF6529599A5C009345BD /* rewarded_ad.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = rewarded_ad.mm; sourceTree = "<group>"; };
+		D40FCF6629599A5C009345BD /* banner_ad_listener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = banner_ad_listener.mm; sourceTree = "<group>"; };
+		D40FCF6729599A5C009345BD /* banner_ad.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = banner_ad.mm; sourceTree = "<group>"; };
+		D40FCF6829599A5C009345BD /* interstitial_ad_listener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = interstitial_ad_listener.mm; sourceTree = "<group>"; };
+		D40FCF6929599A5C009345BD /* rewarded_ad_listener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = rewarded_ad_listener.mm; sourceTree = "<group>"; };
+		D40FCF6A29599A5C009345BD /* interstitial_ad.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = interstitial_ad.mm; sourceTree = "<group>"; };
+		D40FCF6B29599A5C009345BD /* ad_status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ad_status.h; sourceTree = "<group>"; };
+		D40FCF6C29599A5C009345BD /* banner_ad_listener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = banner_ad_listener.h; sourceTree = "<group>"; };
+		D44BD04429658FD40048F387 /* rewarded_interstial_ad_listener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rewarded_interstial_ad_listener.h; sourceTree = "<group>"; };
+		D44BD04529658FD40048F387 /* rewarded_interstial_ad_listener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = rewarded_interstial_ad_listener.mm; sourceTree = "<group>"; };
+		D44BD04E2965A7080048F387 /* rewarded_interstitial_ad.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = rewarded_interstitial_ad.mm; sourceTree = "<group>"; };
+		D4973EC3295AF8980057B552 /* interstitial_handler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = interstitial_handler.cpp; sourceTree = "<group>"; };
+		D4973EC4295AF8980057B552 /* interstitial_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interstitial_handler.h; sourceTree = "<group>"; };
+		D4973EC5295AF8980057B552 /* interstitial_implementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interstitial_implementation.h; sourceTree = "<group>"; };
+		D4973EC7295AF8980057B552 /* banner_ad_handler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = banner_ad_handler.cpp; sourceTree = "<group>"; };
+		D4973EC8295AF8980057B552 /* banner_ad_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = banner_ad_handler.h; sourceTree = "<group>"; };
+		D4973EC9295AF8980057B552 /* banner_implementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = banner_implementation.h; sourceTree = "<group>"; };
+		D4973ECB295AF8980057B552 /* rewarded_video_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rewarded_video_handler.h; sourceTree = "<group>"; };
+		D4973ECC295AF8980057B552 /* rewarded_video_handler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rewarded_video_handler.cpp; sourceTree = "<group>"; };
+		D4973ECD295AF8980057B552 /* rewarded_video_implementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rewarded_video_implementation.h; sourceTree = "<group>"; };
+		D4973ECF295AF8980057B552 /* rewarded_interstitial_video_implementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rewarded_interstitial_video_implementation.h; sourceTree = "<group>"; };
+		D4973ED0295AF8980057B552 /* rewarded_interstitial_video_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rewarded_interstitial_video_handler.h; sourceTree = "<group>"; };
+		D4973ED1295AF8980057B552 /* rewarded_interstitial_video_handler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rewarded_interstitial_video_handler.cpp; sourceTree = "<group>"; };
+		F32D41200B78443EFDD6DF96 /* Pods-native-ads.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-native-ads.release.xcconfig"; path = "Target Support Files/Pods-native-ads/Pods-native-ads.release.xcconfig"; sourceTree = "<group>"; };
+		F65609B4A4B61C46A3CCF6F8 /* Pods-native-ads.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-native-ads.debug.xcconfig"; path = "Target Support Files/Pods-native-ads/Pods-native-ads.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D40FCF5129599A4B009345BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DFA97FA0E4892FE153CEE99 /* Pods_native_ads.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52305386E23CE76E6797BB6C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F65609B4A4B61C46A3CCF6F8 /* Pods-native-ads.debug.xcconfig */,
+				F32D41200B78443EFDD6DF96 /* Pods-native-ads.release.xcconfig */,
+			);
+			name = Pods;
+			path = "../../../../build/jsb-default/frameworks/runtime-src/proj.ios_mac/Pods";
+			sourceTree = "<group>";
+		};
+		D40FCF4A29599A4B009345BD = {
+			isa = PBXGroup;
+			children = (
+				D4973EC6295AF8980057B552 /* BannerAd */,
+				D4973EC2295AF8980057B552 /* Interstitial */,
+				D4973ECE295AF8980057B552 /* RewardedInterstitialVideo */,
+				D4973ECA295AF8980057B552 /* RewardedVideo */,
+				D40FCF5E29599A5C009345BD /* admob */,
+				D40FCF5629599A4B009345BD /* native-ads */,
+				D40FCF5529599A4B009345BD /* Products */,
+				52305386E23CE76E6797BB6C /* Pods */,
+				E224EC7C6E6CDEA1D1BEF251 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D40FCF5529599A4B009345BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D40FCF5429599A4B009345BD /* native_ads.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D40FCF5629599A4B009345BD /* native-ads */ = {
+			isa = PBXGroup;
+			children = (
+				D40FCF5729599A4B009345BD /* native_ads.h */,
+			);
+			path = "native-ads";
+			sourceTree = "<group>";
+		};
+		D40FCF5E29599A5C009345BD /* admob */ = {
+			isa = PBXGroup;
+			children = (
+				D40FCF6229599A5C009345BD /* ios */,
+			);
+			name = admob;
+			path = "../../ad-networks/admob";
+			sourceTree = "<group>";
+		};
+		D40FCF6229599A5C009345BD /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				D44BD04E2965A7080048F387 /* rewarded_interstitial_ad.mm */,
+				D44BD04429658FD40048F387 /* rewarded_interstial_ad_listener.h */,
+				D44BD04529658FD40048F387 /* rewarded_interstial_ad_listener.mm */,
+				D40FCF6329599A5C009345BD /* interstitial_ad_listener.h */,
+				D40FCF6429599A5C009345BD /* rewarded_ad_listener.h */,
+				D40FCF6529599A5C009345BD /* rewarded_ad.mm */,
+				D40FCF6629599A5C009345BD /* banner_ad_listener.mm */,
+				D40FCF6729599A5C009345BD /* banner_ad.mm */,
+				D40FCF6829599A5C009345BD /* interstitial_ad_listener.mm */,
+				D40FCF6929599A5C009345BD /* rewarded_ad_listener.mm */,
+				D40FCF6A29599A5C009345BD /* interstitial_ad.mm */,
+				D40FCF6B29599A5C009345BD /* ad_status.h */,
+				D40FCF6C29599A5C009345BD /* banner_ad_listener.h */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		D4973EC2295AF8980057B552 /* Interstitial */ = {
+			isa = PBXGroup;
+			children = (
+				D4973EC3295AF8980057B552 /* interstitial_handler.cpp */,
+				D4973EC4295AF8980057B552 /* interstitial_handler.h */,
+				D4973EC5295AF8980057B552 /* interstitial_implementation.h */,
+			);
+			name = Interstitial;
+			path = ../../Interstitial;
+			sourceTree = "<group>";
+		};
+		D4973EC6295AF8980057B552 /* BannerAd */ = {
+			isa = PBXGroup;
+			children = (
+				D4973EC7295AF8980057B552 /* banner_ad_handler.cpp */,
+				D4973EC8295AF8980057B552 /* banner_ad_handler.h */,
+				D4973EC9295AF8980057B552 /* banner_implementation.h */,
+			);
+			name = BannerAd;
+			path = ../../BannerAd;
+			sourceTree = "<group>";
+		};
+		D4973ECA295AF8980057B552 /* RewardedVideo */ = {
+			isa = PBXGroup;
+			children = (
+				D4973ECB295AF8980057B552 /* rewarded_video_handler.h */,
+				D4973ECC295AF8980057B552 /* rewarded_video_handler.cpp */,
+				D4973ECD295AF8980057B552 /* rewarded_video_implementation.h */,
+			);
+			name = RewardedVideo;
+			path = ../../RewardedVideo;
+			sourceTree = "<group>";
+		};
+		D4973ECE295AF8980057B552 /* RewardedInterstitialVideo */ = {
+			isa = PBXGroup;
+			children = (
+				D4973ECF295AF8980057B552 /* rewarded_interstitial_video_implementation.h */,
+				D4973ED0295AF8980057B552 /* rewarded_interstitial_video_handler.h */,
+				D4973ED1295AF8980057B552 /* rewarded_interstitial_video_handler.cpp */,
+			);
+			name = RewardedInterstitialVideo;
+			path = ../../RewardedInterstitialVideo;
+			sourceTree = "<group>";
+		};
+		E224EC7C6E6CDEA1D1BEF251 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A40E0F8F6E83A77181DFB66 /* Pods_native_ads.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D40FCF4F29599A4B009345BD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4973ED6295AF8980057B552 /* banner_ad_handler.h in Headers */,
+				D4973EDA295AF8980057B552 /* rewarded_video_implementation.h in Headers */,
+				D4973ED8295AF8980057B552 /* rewarded_video_handler.h in Headers */,
+				D4973ED7295AF8980057B552 /* banner_implementation.h in Headers */,
+				D40FCF5829599A4B009345BD /* native_ads.h in Headers */,
+				D40FCFEB29599A5C009345BD /* banner_ad_listener.h in Headers */,
+				D4973ED4295AF8980057B552 /* interstitial_implementation.h in Headers */,
+				D40FCFEA29599A5C009345BD /* ad_status.h in Headers */,
+				D44BD04629658FD40048F387 /* rewarded_interstial_ad_listener.h in Headers */,
+				D40FCFE329599A5C009345BD /* rewarded_ad_listener.h in Headers */,
+				D4973EDC295AF8980057B552 /* rewarded_interstitial_video_handler.h in Headers */,
+				D40FCFE229599A5C009345BD /* interstitial_ad_listener.h in Headers */,
+				D4973EDB295AF8980057B552 /* rewarded_interstitial_video_implementation.h in Headers */,
+				D4973ED3295AF8980057B552 /* interstitial_handler.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D40FCF5329599A4B009345BD /* native-ads */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D40FCF5B29599A4B009345BD /* Build configuration list for PBXNativeTarget "native-ads" */;
+			buildPhases = (
+				3F40ED81C4935FECA1687324 /* [CP] Check Pods Manifest.lock */,
+				D40FCF4F29599A4B009345BD /* Headers */,
+				D40FCF5029599A4B009345BD /* Sources */,
+				D40FCF5129599A4B009345BD /* Frameworks */,
+				D40FCF5229599A4B009345BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "native-ads";
+			productName = "native-ads";
+			productReference = D40FCF5429599A4B009345BD /* native_ads.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D40FCF4B29599A4B009345BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					D40FCF5329599A4B009345BD = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = D40FCF4E29599A4B009345BD /* Build configuration list for PBXProject "native-ads" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D40FCF4A29599A4B009345BD;
+			productRefGroup = D40FCF5529599A4B009345BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D40FCF5329599A4B009345BD /* native-ads */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D40FCF5229599A4B009345BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F40ED81C4935FECA1687324 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-native-ads-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D40FCF5029599A4B009345BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D44BD04F2965A7080048F387 /* rewarded_interstitial_ad.mm in Sources */,
+				D4973ED9295AF8980057B552 /* rewarded_video_handler.cpp in Sources */,
+				D40FCFE929599A5C009345BD /* interstitial_ad.mm in Sources */,
+				D4973ED2295AF8980057B552 /* interstitial_handler.cpp in Sources */,
+				D40FCFE729599A5C009345BD /* interstitial_ad_listener.mm in Sources */,
+				D40FCFE629599A5C009345BD /* banner_ad.mm in Sources */,
+				D40FCFE529599A5C009345BD /* banner_ad_listener.mm in Sources */,
+				D44BD04729658FD40048F387 /* rewarded_interstial_ad_listener.mm in Sources */,
+				D4973EDD295AF8980057B552 /* rewarded_interstitial_video_handler.cpp in Sources */,
+				D4973ED5295AF8980057B552 /* banner_ad_handler.cpp in Sources */,
+				D40FCFE829599A5C009345BD /* rewarded_ad_listener.mm in Sources */,
+				D40FCFE429599A5C009345BD /* rewarded_ad.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D40FCF5929599A4B009345BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../ad-networks/admob",
+					"$(SRCROOT)/../../**",
+				);
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D40FCF5A29599A4B009345BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../ad-networks/admob",
+					"$(SRCROOT)/../../**",
+				);
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D40FCF5C29599A4B009345BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F65609B4A4B61C46A3CCF6F8 /* Pods-native-ads.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7P73XJ9SWP;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wrapper.native-ads";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D40FCF5D29599A4B009345BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F32D41200B78443EFDD6DF96 /* Pods-native-ads.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7P73XJ9SWP;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wrapper.native-ads";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D40FCF4E29599A4B009345BD /* Build configuration list for PBXProject "native-ads" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D40FCF5929599A4B009345BD /* Debug */,
+				D40FCF5A29599A4B009345BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D40FCF5B29599A4B009345BD /* Build configuration list for PBXNativeTarget "native-ads" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D40FCF5C29599A4B009345BD /* Debug */,
+				D40FCF5D29599A4B009345BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D40FCF4B29599A4B009345BD /* Project object */;
+}

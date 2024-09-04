@@ -1,0 +1,54 @@
+apply plugin: 'com.android.library'
+import org.apache.tools.ant.taskdefs.condition.Os
+
+android {
+    compileSdkVersion PROP_COMPILE_SDK_VERSION.toInteger()
+    buildToolsVersion PROP_BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion PROP_MIN_SDK_VERSION
+        targetSdkVersion PROP_TARGET_SDK_VERSION
+        versionCode 1
+        versionName "1.0"
+
+        externalNativeBuild {
+            ndkBuild {
+                if (!project.hasProperty("PROP_NDK_MODE") || PROP_NDK_MODE.compareTo('none') != 0) {
+                    // skip the NDK Build step if PROP_NDK_MODE is none
+                    targets 'cocos2djs'
+                    arguments 'NDK_TOOLCHAIN_VERSION=clang'
+
+                    def module_paths = [project.file("./")]
+                    if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+                        arguments 'NDK_MODULE_PATH=' + module_paths.join(";")
+                    }
+                    else {
+                        arguments 'NDK_MODULE_PATH=' + module_paths.join(':')
+                    }
+
+                    arguments '-j' + Runtime.runtime.availableProcessors()
+                    abiFilters.addAll(PROP_APP_ABI.split(':').collect{it as String})
+                }
+            }
+        }
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    sourceSets.main {
+        aidl.srcDir "../ad-networks/admob/android/java"
+        java.srcDir "../ad-networks/admob/android/java"
+        manifest.srcFile "src/main/AndroidManifest.xml"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api 'com.google.android.gms:play-services-ads:21.1.0'
+    api 'androidx.constraintlayout:constraintlayout:2.1.4'
+}
